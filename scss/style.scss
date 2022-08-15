@@ -1,0 +1,63 @@
+@import "resetCSS";
+
+body, html {
+  height: 100%;
+  display: grid;
+}
+
+.window {
+  margin: auto;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin content($color){
+  background-color: $color;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 1fr 1.5fr;
+  img{
+    padding: 7vh 2vh 0 4vh;
+    width: 15vh;
+  }
+  h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    padding: 0 1vh 0 5vh;
+    font-size: 5vh;
+  }
+  p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 0 5vh 0 5vh;
+    font-size: 2vh;
+  }
+  button{
+    background-color: hsl(0, 0%, 95%);
+    border-style: none;
+    color: $color;
+    width: 15vh;
+    height: 5vh;
+    margin: 5vh;
+    border-radius: 50px;
+    font-family: 'Lexend Deca', sans-serif;
+    align-self: end;
+    font-size: 2vh;
+  }
+}
+
+.sedans {
+  @include content(hsl(31, 77%, 52%));
+  border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+  @include content(hsl(184, 100%, 22%));
+}
+
+.luxury {
+  @include content(hsl(179, 100%, 13%));
+  border-radius: 0 10px 10px 0;
+}
+
+@import "mobile";

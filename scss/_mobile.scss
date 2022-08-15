@@ -1,0 +1,13 @@
+@media only screen and (max-width: 400px) {
+    .window {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 2vh auto 2vh auto;
+    }
+    .sedans {
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
